@@ -3328,6 +3328,37 @@ body {
   max-width: 26.6rem;
   width: 100%;
 }
+@media (max-width: 48em) {
+  .error {
+    margin-top: 9.2rem;
+  }
+  .error__container{
+    gap: 4rem;
+  }
+  .error__title {
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .error__description{
+    font-size: 3.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    max-width: 100%;
+  }
+  .error__image{
+    max-width: 56.3rem;
+    margin-bottom: 4rem;
+  }
+  .error__link{
+    max-width: 24.6rem;
+    margin-top: 8rem;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
 body.lock {
   overflow: hidden;
 }
