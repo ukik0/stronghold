@@ -1,0 +1,42 @@
+@import "set";
+@import "components";
+
+@import "header";
+@import "footer";
+@import "intro";
+@import "info";
+@import "banner";
+@import "top";
+@import "technical";
+@import "start";
+@import "qa";
+@import "indicators";
+@import "advantages";
+@import "website";
+@import "consulting";
+@import "feedback";
+@import "tech-intro";
+@import "blog-intro";
+@import "blog";
+@import "news";
+@import "modal";
+@import "blog-page";
+
+
+
+
+body.lock {
+  overflow: hidden;
+}
+
+@media (min-width: 48.01em) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .desktop {
+    display: none;
+  }
+}

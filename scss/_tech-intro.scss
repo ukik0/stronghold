@@ -1,0 +1,95 @@
+@import "param";
+
+.tech-intro {
+  position: relative;
+  margin-bottom: 22rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    min-height: 96rem;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__logo {}
+
+  &__content {
+    padding: 4rem;
+    border-radius: 2rem;
+    background-color: rgba(24, 23, 23, 0.68);
+  }
+
+  &__sub-title {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    letter-spacing: 0.115em;
+
+  }
+
+  &__title {
+    margin-bottom: 5rem;
+    font-weight: bold;
+    font-size: 5.6rem;
+    letter-spacing: 0.01em;
+  }
+}
+
+@media (max-width: 48em) {
+  .tech-intro {
+    margin-bottom: 30rem;
+
+    &__container {
+      display: block;
+      min-height: auto;
+    }
+
+    &__bg {
+      position: static;
+      height: 37.6rem;
+      margin-bottom: 7rem;
+    }
+
+    &__logo {
+      display: block;
+      width: 47rem;
+      height: 14rem;
+      margin-bottom: 3rem;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__content {
+      padding: 0;
+      background-color: transparent;
+    }
+
+    &__sub-title {
+      font-size: 2.4rem;
+
+    }
+
+    &__title {
+      margin-bottom: 6rem;
+      font-size: 6rem;
+    }
+  }
+}

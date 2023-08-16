@@ -1,0 +1,229 @@
+@import "param";
+
+.start {
+  margin-bottom: 22rem;
+
+  &__info-block {
+    margin-bottom: 6rem;
+
+    .info__img-box {
+      width: 63rem;
+      height: 78.8rem;
+      margin-right: 8rem;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 38.7rem;
+    padding: 4rem;
+    border-radius: 1.9rem;
+    background: linear-gradient(0deg, rgba(12, 11, 11, 0.9), rgba(12, 11, 11, 0.9)), #FFFFFF;
+    overflow: hidden;
+
+    &:nth-child(3n + 1) {
+      margin-right: 4.4rem;
+    }
+
+    &:nth-child(3n) {
+      margin-left: auto;
+    }
+
+    &:nth-child(n + 4) {
+      margin-top: 4.5rem;
+    }
+
+    &.optimal {
+      .start__optimal {
+        display: block;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: -3.9rem;
+        top: -5.5rem;
+        display: block;
+        width: 18.6rem;
+        height: 13rem;
+        border-radius: 100%;
+        transform: matrix(0.95, -0.33, 0.32, 0.94, 0, 0);
+        background-color: $yellow;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: -4.4rem;
+        top: -5.9rem;
+        display: block;
+        width: 19.5rem;
+        height: 13.7rem;
+        border-radius: 100%;
+        border: 1px solid $yellow;
+        transform: matrix(0.95, -0.33, 0.32, 0.94, 0, 0);
+      }
+    }
+  }
+
+  &__optimal {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 10rem;
+    font-family: $def3-6;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000;
+  }
+
+  &__item-sub-title {
+    margin-bottom: 1rem;
+    font-family: $mons;
+    font-size: 1.4rem;
+    color: rgba(235, 44, 0, 0.8);
+  }
+
+  &__item-title {
+    position: relative;
+    z-index: 1;
+    width: 70%;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 2.6rem;
+  }
+
+  &__text {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+  }
+
+  &__list {
+    margin-bottom: 4rem;
+  }
+
+  &__list-item {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+    font-size: 1.5rem;
+
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 4.6rem;
+
+    &--min {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .start {
+    margin-bottom: 30rem;
+
+    &__info-block {
+      margin-bottom: 5rem;
+
+      .info__img-box {
+        order: 0;
+        width: 100%;
+        height: 70rem;
+        margin-right: 0;
+        margin-bottom: 7rem;
+      }
+
+      .info__text-block {
+        margin-bottom: 0;
+      }
+    }
+
+    &__cards {
+    }
+
+    &__item {
+      width: 100%;
+      border-radius: 2.6rem;
+
+      &:nth-child(3n + 1) {
+        margin-right: 0;
+      }
+
+      &:nth-child(3n) {
+        margin-left: auto;
+      }
+
+      &:nth-child(n + 2) {
+        margin-top: 2.5rem;
+      }
+
+      &.optimal {
+        &:before {
+          right: -5.5rem;
+          top: -9.2rem;
+          width: 28.4rem;
+          height: 20rem;
+        }
+
+        &:after {
+          right: -6.2rem;
+          top: -9.6rem;
+          width: 29.6rem;
+          height: 20.8rem;
+        }
+      }
+    }
+
+    &__optimal {
+      right: 3rem;
+      top: 2rem;
+      width: 16rem;
+      font-size: 2.4rem;
+    }
+
+    &__item-sub-title {
+      font-size: 2.4rem;
+    }
+
+    &__item-title {
+      margin-bottom: 2.4rem;
+      font-size: 3.2rem;
+    }
+
+    &__text {
+      margin-bottom: 5rem;
+      font-size: 2.8rem;
+      letter-spacing: 0.035em;
+    }
+
+    &__list {
+      margin-bottom: 8rem;
+    }
+
+    &__list-item {
+      margin-left: 2.6rem;
+      font-size: 2.4rem;
+    }
+
+    &__price {
+      font-size: 4.8rem;
+
+      &--min {
+        font-size: 3.2rem;
+      }
+    }
+  }
+}

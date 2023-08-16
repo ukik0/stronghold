@@ -1,0 +1,136 @@
+@import "param";
+
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 44rem;
+
+  @media (max-width: 48em) {
+    padding-bottom: 52rem;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 44rem;
+  padding-top: 2rem;
+
+  &__logo {
+    display: block;
+    width: 50rem;
+    height: 15rem;
+    margin-bottom: 2rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3.5rem;
+  }
+
+  &__list {
+    flex: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__list-item {
+    font-family: $def3-6;
+    font-weight: 300;
+    font-size: 1.4rem;
+
+    &:not(:last-child) {
+      margin-right: 9rem;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__contacts {
+    flex: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__contact {
+    width: 2.2rem;
+    height: 2.2rem;
+
+    &:not(:last-child) {
+      margin-right: 3.5rem;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__copyright {
+    font-family: $def3-6;
+    font-weight: 300;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .footer {
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 10rem;
+
+    &__logo {
+      width: 47rem;
+      height: 14rem;
+      margin-bottom: 3rem;
+    }
+
+    &__content {
+      margin-bottom: 5rem;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__list-item {
+      flex: 50%;
+      font-size: 2.4rem;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
+      &:nth-child(n + 3) {
+        margin-top: 4rem;
+      }
+    }
+
+    &__contacts {
+    }
+
+    &__contact {
+    }
+
+    &__copyright {
+      font-size: 2.8rem;
+    }
+  }
+}

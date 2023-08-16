@@ -1,0 +1,149 @@
+@import "param";
+
+.consulting {
+  margin-bottom: 22rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info-block {
+    width: 48.4rem;
+  }
+
+  &__sub-title {
+    font-family: $def1-8;
+    font-weight: 250;
+    font-size: 1.8rem;
+    letter-spacing: 0.02em;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    font-weight: bold;
+    font-size: 5.6rem;
+    letter-spacing: 0.01em;
+  }
+
+  &__text-box {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__text-title {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+    font-family: $def3-6;
+    font-weight: 600;
+    font-size: 2.2rem;
+
+    &--number {
+      font-weight: normal;
+      min-width: 5.5rem;
+      font-size: 5rem;
+      line-height: 4.4rem;
+    }
+
+    > span {
+      display: block;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    letter-spacing: 0.035em;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &__img-box {
+    position: relative;
+    width: 65rem;
+    height: 65rem;
+    margin: 5rem 5rem 5rem 0;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: -5rem;
+      top: -5rem;
+      z-index: -1;
+      display: block;
+      width: 42.6rem;
+      height: 75rem;
+      background-color: $yellow;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .consulting {
+    margin-bottom: 30rem;
+
+    &__container {
+      flex-direction: column;
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    &__info-block {
+      order: 2;
+      width: 100%;
+    }
+
+    &__sub-title {
+      font-size: 2.6rem;
+    }
+
+    &__title {
+      margin-bottom: 6rem;
+      font-size: 4.8rem;
+      letter-spacing: 0.04em;
+    }
+
+    &__text-box {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__text-title {
+      margin-bottom: 2rem;
+      font-size: 3.6rem;
+
+      &--number {
+        min-width: 6.6rem;
+        font-size: 6rem;
+        line-height: 5.5rem;
+      }
+    }
+
+    &__text {
+      font-size: 2.8rem;
+    }
+
+    &__img-box {
+      order: 1;
+      width: 100%;
+      height: 73rem;
+      margin: 0 0 6rem 0;
+      padding: 4rem 4rem 4rem 0;
+
+      &:before {
+        right: 0;
+        top: 0;
+        width: 42.2rem;
+        height: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,225 @@
+@import "param";
+
+.feedback {
+  margin-bottom: 22rem;
+
+  &__container {
+    width: 156rem;
+    padding-top: 16.5rem;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 16.2rem;
+    margin-bottom: 4rem;
+    border-radius: 2rem;
+    background-color: #171718;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 75rem;
+      height: 200rem;
+      margin-left: auto;
+      transform: rotate(-20deg) translate(55%, -10%);
+      background-color: $yellow;
+      cursor: pointer;
+    }
+  }
+
+  &__info-block {
+    position: relative;
+    width: 53.5rem;
+    padding: 8rem 0;
+  }
+
+  &__title {
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+    font-size: 4.6rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    letter-spacing: 0.035em;
+    color: rgba(255, 255, 255, 0.8);
+
+    &--bold {
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  &__button-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+  }
+
+  &__btn {
+    @media (min-width: 48.01em) {
+      flex: none;
+      margin-left: 2rem;
+      padding: 1.3rem 2.9rem;
+      border-radius: 1.1rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__img-box {
+    position: relative;
+    width: 55rem;
+    height: 55rem;
+    margin: -16.5rem 3rem 5rem 0;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    width: 29.3rem;
+    margin: 0 2rem;
+    padding: 3rem;
+    border-radius: 1.3rem;
+    background-color: rgba(24, 23, 23, 0.8);
+  }
+
+  &__item-title {
+    margin-bottom: 0.7rem;
+    font-weight: bold;
+    font-size: 2.2rem;
+  }
+
+  &__item-sub-title {
+    margin-bottom: 1.5rem;
+    font-family: $mons;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &__item-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .feedback {
+    margin-bottom: 30rem;
+
+    &__container {
+      width: 100%;
+    }
+
+    &__content {
+      flex-direction: column;
+      justify-content: normal;
+      padding-left: 0;
+      padding-bottom: 8rem;
+      margin-bottom: 6rem;
+    }
+
+    &__bg {
+      &:before {
+        content: '';
+        display: block;
+        width: 150%;
+        height: 150rem;
+        margin-left: auto;
+        transform: rotate(-12deg) translate(-10%, -50%);
+        background-color: $yellow;
+        cursor: pointer;
+      }
+    }
+
+    &__info-block {
+      order: 2;
+      width: 100%;
+      padding: 0 4rem;
+    }
+
+    &__title {
+      margin-bottom: 4rem;
+      font-size: 4rem;
+    }
+
+    &__text {
+      font-size: 2.8rem;
+
+      &--bold {
+        order: 2;
+        width: 40rem;
+      }
+    }
+
+    &__button-block {
+      flex-direction: column;
+      align-items: normal;
+      justify-content: normal;
+      margin-top: 6rem;
+    }
+
+    &__btn {
+      order: 1;
+      margin-bottom: 4rem;
+    }
+
+    &__img-box {
+      order: 1;
+      width: 100%;
+      height: 69rem;
+      padding: 0 3rem;
+      margin: 3rem 0 20rem;
+    }
+
+    &__cards {
+      display: block;
+    }
+
+    &__item {
+      width: 61rem;
+      margin: 0 auto;
+      padding: 4rem;
+      border-radius: 2.6rem;
+
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__item-title {
+      margin-bottom: 0.8rem;
+      font-size: 3.2rem;
+    }
+
+    &__item-sub-title {
+      margin-bottom: 2.4rem;
+      font-size: 2.4rem;
+    }
+
+    &__item-text {
+      font-size: 2.8rem;
+      letter-spacing: 0.035em;
+    }
+  }
+}

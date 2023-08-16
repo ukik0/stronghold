@@ -1,0 +1,250 @@
+@import "param";
+
+.news-big {
+  display: flex;
+  width: 100%;
+  border-radius: 2.2rem;
+  border: 3px solid #FFFFFF;
+  background: linear-gradient(0deg, rgba(12, 11, 11, 0.95), rgba(12, 11, 11, 0.95)), rgba(255, 255, 255, 0.9);
+
+  &:not(:last-child) {
+    margin-bottom: 4.5rem;
+  }
+
+  &--strip {
+    .news-big__info-block {
+      margin: 0 4rem 7rem 4rem;
+    }
+  }
+
+  &__info-block {
+    flex: none;
+    width: 54rem;
+    margin: 4rem;
+  }
+
+  &__title {
+    margin-bottom: 1.6rem;
+    font-weight: bold;
+    font-size: 5.6rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    font-size: 1.6rem;
+    letter-spacing: 0.035em;
+  }
+
+  &__img-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 2.2rem 2.2rem 0;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__strip {
+    width: fit-content;
+    min-width: 17rem;
+    margin: 3rem -4.2rem 3rem auto;
+    padding: 0.8rem 3rem;
+    border-radius: 7.4rem 0 0 7.4rem;
+    border: 1px solid #EB2C00;
+    font-size: 1.6rem;
+    letter-spacing: 0.035em;
+    text-align: center;
+  }
+}
+
+.news-medium {
+  display: flex;
+  width: 60.8rem;
+  border-radius: 2.2rem;
+  border: 3px solid #FFFFFF;
+  background: linear-gradient(0deg, rgba(12, 11, 11, 0.95), rgba(12, 11, 11, 0.95)), rgba(255, 255, 255, 0.9);
+
+  &:nth-child(n + 3) {
+    margin-top: 3.5rem;
+  }
+
+  &__img-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 2.2rem 0 0 2.2rem;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info-block {
+    flex: none;
+    width: 25.5rem;
+    margin: 3rem 3rem 4rem 3rem;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 4.6rem;
+    hyphens: auto;
+  }
+
+  &__desc {
+    font-size: 1.6rem;
+    letter-spacing: 0.035em;
+  }
+}
+
+.news-min {
+  width: 39rem;
+  padding: 3.5rem 5rem 5rem 3.5rem;
+  border-radius: 2rem;
+  border: 3px solid #FFFFFF;
+  background: linear-gradient(0deg, rgba(12, 11, 11, 0.95), rgba(12, 11, 11, 0.95)), rgba(255, 255, 255, 0.9);
+
+  &:nth-child(n + 4) {
+    margin-top: 4rem;
+  }
+
+  &__sub-title {
+    margin-bottom: 0.5rem;
+    font-family: $mons;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 2.2rem;
+  }
+
+  &__desc {
+    font-size: 1.6rem;
+    letter-spacing: 0.035em;
+  }
+}
+
+@media (max-width: 48em) {
+  .news-big {
+    display: block;
+    border-radius: 4.4rem;
+    border: 1px solid #FFFFFF;
+
+    &:not(:last-child) {
+      margin-bottom: 9rem;
+    }
+
+    &--strip {
+      .news-big__info-block {
+        padding: 0 4rem 6rem 4rem;
+        margin: 0;
+      }
+
+      .news-big__img-box {
+        height: 45rem;
+      }
+    }
+
+    &__info-block {
+      width: 100%;
+      padding: 8rem 4rem 6rem 4rem;
+      margin: 0;
+    }
+
+    &__title {
+      margin-bottom: 4rem;
+      font-size: 6rem;
+    }
+
+    &__desc {
+      font-size: 2.8rem;
+    }
+
+    &__img-box {
+      width: 100%;
+      height: 60rem;
+      border-radius: 0 0 4.4rem 4.4rem;
+    }
+
+    &__strip {
+      min-width: auto;
+      margin: 4.8rem auto 4.8rem -4rem;
+      padding: 1.2rem 7rem;
+      border-radius: 0 100rem 100rem 0;
+      border-left: none;
+      font-size: 2.8rem;
+    }
+  }
+
+  .news-medium {
+    flex-direction: column;
+    width: 32.2rem;
+    border-radius: 4.4rem;
+    border: 1px solid #FFFFFF;
+
+    &:nth-child(n + 3) {
+      margin-top: 4rem;
+    }
+
+    &__img-box {
+      order: 2;
+      height: 44rem;
+      border-radius: 0 0 4.4rem 4.4rem;
+    }
+
+    &__info-block {
+      order: 1;
+      width: 100%;
+      margin: 0;
+      padding: 8rem 3rem 4rem 3rem;
+    }
+
+    &__title {
+      margin-bottom: 3rem;
+      font-size: 3.6rem;
+    }
+
+    &__desc {
+      font-size: 2.8rem;
+      letter-spacing: 0;
+    }
+  }
+
+  .news-min {
+    flex: none;
+    width: 27rem;
+    margin-right: 4rem;
+    padding: 3.8rem 2.8rem;
+    border-radius: 4.2rem;
+    border: 1px solid #FFFFFF;
+
+    &:nth-child(n + 4) {
+      margin-top: 0;
+    }
+
+    &__sub-title {
+      margin-bottom: 1rem;
+      font-size: 2.4rem;
+    }
+
+    &__title {
+      margin-bottom: 2.4rem;
+      font-size: 2.8rem;
+    }
+
+    &__desc {
+      font-size: 2.4rem;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@import "param";
+
+.header {
+  padding: 1.2rem 0;
+  background-color: rgb(16, 16, 16);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__burger {
+  }
+
+  &__list {
+    flex: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__list-item {
+    font-family: $def3-6;
+    font-weight: 300;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 10rem;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__contacts {
+    flex: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__contact {
+    width: 2.2rem;
+    height: 2.2rem;
+
+    &:not(:first-child) {
+      margin-left: 3.5rem;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .header {
+    padding: 5.6rem 0;
+    background-color: rgb(0, 0, 0);
+
+    &__container {
+    }
+
+    &__burger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 4rem;
+      height: 3.2rem;
+
+      > span {
+        display: block;
+        width: 2.2rem;
+        height: 2px;
+        background-color: white;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 3.4rem;
+        height: 2px;
+        background-color: white;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+      }
+    }
+
+    &__list {
+      //flex: auto;
+      //display: flex;
+      //align-items: center;
+    }
+
+    &__list-item {
+      //font-family: $def3-6;
+      //font-weight: 300;
+      //font-size: 1.6rem;
+      //cursor: pointer;
+      //
+      //&:not(:last-child) {
+      //  margin-right: 10rem;
+      //}
+      //
+      //&:hover {
+      //  opacity: 0.8;
+      //}
+    }
+
+    &__contacts {
+    }
+
+    &__contact {
+      width: 3.2rem;
+      height: 3.2rem;
+
+      &:not(:first-child) {
+        margin-left: 6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "param";
+
+.button {
+  display: block;
+  width: fit-content;
+  padding: 1.8rem 3.6rem;
+  border-radius: 1.5rem;
+  background-color: $red;
+  font-weight: bold;
+  font-size: 2.3rem;
+
+  &:hover {
+    background-color: #ab1d00;
+  }
+}
+
+.red-link {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: $red;
+
+  > svg {
+    width: 0.6rem;
+    height: 1.1rem;
+    margin-left: 0.8rem;
+
+    path {
+      fill: $red;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .button {
+    padding: 1.8rem 3.4rem;
+    border-radius: 1.5rem;
+    font-size: 3.2rem;
+  }
+
+  .red-link {
+    font-family: $def3-6;
+    font-weight: 600;
+    font-size: 2.8rem;
+
+    > svg {
+      width: 0.8rem;
+      height: 1.6rem;
+      margin-left: 2.4rem;
+    }
+  }
+}

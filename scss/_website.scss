@@ -1,0 +1,143 @@
+@import "param";
+
+.website {
+  margin-bottom: 22rem;
+
+  &__container {
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+
+  &__box {
+  }
+
+  &__img-box {
+    width: 48.5rem;
+    height: 60rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text-box {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.8);
+
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__title-text {
+    font-family: $def3-6;
+    font-weight: 600;
+    font-size: 2.6rem;
+    color: white;
+
+    &--number {
+      font-family: $def4-7;
+      font-weight: 400;
+      font-size: 5rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    font-weight: bold;
+    font-size: 5.6rem;
+    letter-spacing: 0.04em;
+    text-align: center;
+
+    &--min {
+      font-family: $def3-6;
+      font-weight: 600;
+      font-size: 2.6rem;
+    }
+
+    > span {
+      display: block;
+    }
+  }
+
+  &__desc {
+    width: 64.3rem;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    letter-spacing: 0.035em;
+    text-align: center;
+  }
+}
+
+@media (max-width: 48em) {
+  .website {
+    margin-bottom: 20rem;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__content {
+      order: 3;
+      flex-direction: column;
+      align-items: normal;
+      justify-content: normal;
+      margin-bottom: 0;
+    }
+
+    &__box {
+      order: 2;
+
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__img-box {
+      order: 1;
+      width: 100%;
+      height: 85.2rem;
+      margin-bottom: 6rem;
+    }
+
+    &__text-box {
+      font-size: 2.4rem;
+
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__title-text {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+
+      &--number {
+        font-size: 6rem;
+      }
+    }
+
+    &__title {
+      margin-bottom: 4rem;
+      font-size: 5.6rem;
+
+      &--min {
+        font-size: 3.2rem;
+      }
+    }
+
+    &__desc {
+      width: 100%;
+      margin-bottom: 6rem;
+      font-size: 2.8rem;
+    }
+  }
+}
