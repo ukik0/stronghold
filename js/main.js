@@ -59,9 +59,11 @@ $(document).ready(function () {
     // BurgerMenu
     const burgerButton = document.querySelector('.header__burger');
     const burgerMenu = document.querySelector('.header__mobile-menu')
+    const body = document.querySelector('body')
 
     burgerButton.addEventListener('click', () => {
         burgerMenu.classList.toggle('--active');
         burgerButton.classList.toggle('--active')
+        body.classList.toggle('lock')
     })
 });
